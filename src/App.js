@@ -5,7 +5,7 @@ function App() {
   const [productList, setProductList] = useState([]);
 
   const getProducts = () => {
-    Axios.get("https://server-pet.onrender/products")
+    Axios.get("http://localhost:3001/products")
       .then((res) => {
         setProductList(res.data);
       })
@@ -15,7 +15,7 @@ function App() {
   };
 
   const deleteProducts = (id) => {
-    Axios.delete(`https://server-pet.onrender/products/${id}`)
+    Axios.delete(`http://localhost:3001/products/${id}`)
       .then((res) => {
         setProductList(productList.filter((product) => product._id !== id));
       })
