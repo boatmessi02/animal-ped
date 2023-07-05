@@ -28,11 +28,93 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* fourth Button */
+
+.fourth-button {
+  width: 250px;
+  height: 50px;
+  border: 3px rgba(255, 0, 0, 0.487) solid;
+  position: relative;
+  color: rgb(190, 186, 186);
+  cursor: pointer;
+}
+
+.fourth-button:before {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-left: 3px rgba(255, 0, 0, 0.487) solid;
+  border-top: 3px rgba(255, 0, 0, 0.487) solid;
+  transition: all 0.3s ease-in;
+}
+
+.fourth-button:after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  border-right: 3px rgba(255, 0, 0, 0.487) solid;
+  border-bottom: 3px rgba(255, 0, 0, 0.487) solid;
+  transition: all 0.2s ease-in;
+}
+
+.fourth-button:hover::before {
+  width: 50px;
+  height: 50px;
+  border-left: 3px rgb(255, 0, 0) solid;
+  border-top: 3px rgb(255, 0, 0) solid;
+}
+
+.fourth-button:hover::after {
+  width: 50px;
+  height: 50px;
+  border-right: 3px rgb(255, 0, 0) solid;
+  border-bottom: 3px rgb(255, 0, 0) solid;
+}
+
+.fourth-button:hover {
+  color: rgb(255, 0, 0);
+  box-shadow: 0px 5px 25px 1px rgb(255, 0, 0);
+  border-color: rgb(255, 0, 0);
+}
+
+/* five Button */
+.fiveth-button {
+  cursor: pointer;
+  width: 250px;
+  height: 50px;
+  border: 3px rgba(255, 255, 0, 0.494) solid;
+  position: relative;
+  color: rgba(255, 255, 0, 0.494);
+}
+
+.fiveth-button::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease-in;
+}
+
+.fiveth-button:hover:before {
+  border-left: 3px yellow solid;
+  border-right: 3px yellow solid;
+  width: 100%;
+  box-shadow: 0px 5px 25px 1px yellow;
+}
+
+.fiveth-button:hover {
+  color: yellow;
+  border: 3px yellow solid;
 }
